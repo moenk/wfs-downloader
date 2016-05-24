@@ -27,7 +27,6 @@ Partial Class main
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
@@ -37,6 +36,8 @@ Partial Class main
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'Button1
@@ -73,14 +74,6 @@ Partial Class main
         Me.Label3.Size = New System.Drawing.Size(188, 13)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "WFS Server URL (without parameters)"
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(15, 100)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(487, 20)
-        Me.TextBox2.TabIndex = 5
-        Me.TextBox2.Text = "http://maps.geo.hu-berlin.de/geoserver/wfs"
         '
         'ListBox1
         '
@@ -152,11 +145,33 @@ Partial Class main
         Me.Button5.Text = "Exit"
         Me.Button5.UseVisualStyleBackColor = True
         '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(18, 100)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(481, 21)
+        Me.ComboBox1.TabIndex = 14
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Checked = True
+        Me.CheckBox1.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBox1.Location = New System.Drawing.Point(526, 129)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(84, 17)
+        Me.CheckBox1.TabIndex = 15
+        Me.CheckBox1.Text = "crowd mode"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
         'main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(624, 442)
+        Me.Controls.Add(Me.CheckBox1)
+        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
@@ -165,7 +180,6 @@ Partial Class main
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.ListBox1)
-        Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox1)
@@ -174,7 +188,7 @@ Partial Class main
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "main"
-        Me.Text = "WFS Downloader v0.2 by moenk"
+        Me.Text = "WFS Downloader v0.3 by moenk"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -183,7 +197,6 @@ Partial Class main
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents ListBox1 As System.Windows.Forms.ListBox
     Friend WithEvents FolderBrowserDialog1 As System.Windows.Forms.FolderBrowserDialog
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
@@ -193,5 +206,7 @@ Partial Class main
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents Button5 As System.Windows.Forms.Button
+    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
 
 End Class
